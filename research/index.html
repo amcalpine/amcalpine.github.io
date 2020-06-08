@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" language="javascript" src="../js/lib/d3.min.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/lib/p5.min.js"></script>
+    <link   type="text/css" rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+      <a href="..">about</a>
+      <a href="javascript:void(0);" class="current">research</a>
+      <a href="../contact/">contact</a>
+      </nav>
+    </header>
+    <main>
+      <section id="abm-holder"></section>
+      <section>
+        <h2>Research</h2>
+        <p>
+        I have conducted research in my roles as a student, GVHC staff member, and consultant. 
+        My work has been peer-reviewed and published in 
+        <a target="_blank" href="https://scholar.google.com/citations?user=t5l5YCwAAAAJ&hl=en">The Lancet</a>, 
+        <a target="_blank" href="https://scholar.google.com/citations?user=t5l5YCwAAAAJ&hl=en">The Journal of Computational Social Science</a>, 
+        <a target="_blank" href="https://scholar.google.com/citations?user=t5l5YCwAAAAJ&hl=en">BMC Conflict and Health</a>, 
+        <a target="_blank" href="https://scholar.google.com/citations?user=t5l5YCwAAAAJ&hl=en">Sexual and Reproductive Health Matters</a>, 
+        <a target="_blank" href="https://scholar.google.com/citations?user=t5l5YCwAAAAJ&hl=en">BMC International Health and Human Rights</a> and others.
+        </p>
+	<p>
+	I have also co-authored reports for <a target="_blank" href="">The Freedom Fund</a>, <a target="_blank" href="">Plan International</a>, <a target="_blank" href="">Elrha</a> and the DfID funded consortium <a target="_blank" href="">What Works to Prevent Violence</a>.
+	</p>
+        <p>
+          More information can be found by visiting my <a target="_blank" href="https://scholar.google.com/citations?user=t5l5YCwAAAAJ&hl=en">Google Scholar</a> page.
+        </p>
+	<h2>Current PhD Research</h2>
+	<p>
+	I am enrolled in a PhD program in Public Health and Policy at LSHTM. 
+	My PhD thesis explores low-wage labour migration pathways between Myanmar and Thailand to inform safer migration interventions with the aim of preventing human trafficking and labour exploitation. 
+	</p>
+	<p>
+	This research incorporates complex systems and social network theory using egocentric network analysis (<b>Figure 1</b>) and multi-scale agent-based modelling (<b>Figure 2</b> and <b>Interactive ABM</b> below). 
+	This model aims to explore how migrants, social and intermediary networks, and employers form a complex system and to understand patterns that emerge.
+	</p>
+	<figure>
+	  <img src="../assets/data-collection.png">
+	  <figcaption><b>Figure 1.</b> Dynamic Participatory Egocentric Network (D-PEN) tool custom-built to assist in the collection of network data.</figcaption>
+	</figure>
+
+	<figure>
+	  <img src="../assets/emergent-migrations-runs.png">
+	  <figcaption><b>Figure 2.</b> Emergent Migrations ABM (2020), Four model runs.</figcaption>
+	</figure>
+        <h2>PhD Manuscripts under Development</h2>
+        <ul>
+          <li>
+            <b>McAlpine A</b>, Kiss, L, Zimmerman C, and Chalabi Z. 
+            <i>Agent-based modeling for migration and modern slavery research: a systematic review. </i>
+            Journal of Computational Social Science. 2020. 
+            <b>[Accepted, Forthcoming 2020]</b>
+          </li>
+          <li>
+            <b>McAlpine A</b>, Demarest L, Zimmerman C, and Kiss L. 
+            <i>Collecting egocentric network data from Myanmar migrant workers: Developing and piloting a participatory mixed-methods visual network survey application.</i> 
+            Migration Methodologies Workshop Special Issue. National University of Singapore. 2020. 
+            <b>[Accepted, Forthcoming 2020]</b>
+          </li>
+          <li>
+            <b>McAlpine A</b>, et al. 
+            <i>The networks, interactions and decisions that facilitate low-wage labour migration from Myanmar to Thailand: Qualitative network analysis.</i> 
+            <b>[In Preparation- Forthcoming 2020]</b>
+          </li>
+          <li>
+            <b>McAlpine A</b>, et al. 
+            <i>Emergent migration pathways to exploitation versus decent work: An agent-based model.</i> 
+            <b>[In Preparation- Forthcoming 2020]</b>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <section id="abm" style="margin-top:10em;">
+      <h2 style="text-align:center;"><b>Interactive ABM.</b> <i>Emergent Migrations</i>, A stochastic ABM with heuristic rules</h2>
+       <div id="abm-main"></div>
+       <div id="abm-data"></div>
+       <div class="abm-controls">
+         <div class="slider">
+           <button id="start">start</button>
+           <button id="reset">restart</button>
+           <button id="export">export data</button>
+         </div>
+         <div class="slider">
+           <label for="ticks"><span id="currentNumOfTicks" class="current"></span>Time Steps<span class="max">3000</span></label>
+           <input  name="ticks" id="numOfTicks" type="range" step="5" min="0" max="3000">
+         </div>
+         <div >
+           <div class="slider">
+             <label for="migrant"><span id="currentNumOfMigrants" class="current"></span>Migrants<span class="max">350</span></label>
+             <input name="migrant" id="numOfMigrants" type="range" step="1" min="1" max="350">
+           </div>
+           <div class="slider">
+             <label for="intermediary"><span id="currentNumOfIntermediaries" class="current"></span>Intermediaries<span class="max">150</span></label>
+             <input name="intermediary" id="numOfIntermediaries" type="range" step="1" min="1" max="150">
+           </div>
+           <div class="slider" style="padding-bottom: 1em;">
+             <label for="employer"><span id="currentNumOfEmployers" class="current"></span>Employers<span class="max">6</span></label>
+             <input name="employer" id="numOfEmployers" type="range" step="1" min="2" max="6">
+           </div>
+         </div>
+       </div>
+    </section>
+    <footer>
+      <p>
+       Alys McAlpine &copy; 2020 
+      </p>
+    </footer>
+    <script type="text/javascript" language="javascript" src="../js/header/random-walkers.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/header/sketch-abm.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/emergent-migrations/migrant.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/emergent-migrations/path.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/emergent-migrations/step.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/emergent-migrations/intermediary.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/emergent-migrations/employer.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/emergent-migrations/sketch-descriptives.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/emergent-migrations/sketch-abm.js"></script>
+  </body>
+</html>
