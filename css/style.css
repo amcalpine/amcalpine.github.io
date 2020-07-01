@@ -188,7 +188,7 @@ html img#dc{
 }
 
 html  img#cartoon{
-    content:url("../assets/cartoon-mobile.png");
+    content:url("../assets/cartoon-mobile.jpeg");
   }
 
 /* ABM --------------------------------------------- */
@@ -241,7 +241,7 @@ html footer p{
   }
 
   html img#cartoon{
-    content:url("../assets/cartoon-desktop.png");
+    content:url("../assets/cartoon-desktop.jpeg");
   }
 
 }
